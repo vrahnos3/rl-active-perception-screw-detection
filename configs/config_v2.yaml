@@ -1,0 +1,59 @@
+workspace_path: "C:/Users/panosvrachnos/Documents/thesis_env"
+experiment_name: "experiment_v3"
+log_dir: "logs"
+
+yolo_model: "pc_screw_detection.pt"
+
+targets:
+  left_down:
+    point: [ 4.708, 5.132, 6.687 ] # [1, 0, 0, 0]
+    one_hot: [1, 0, 0, 0]
+  left_up:
+    point: [ 4.702, 5.603, 6.687 ]   # [0, 1, 0, 0]
+    one_hot: [0, 1, 0, 0]
+  right_down:
+    point: [5.36, 5.132, 6.687]   # [0, 0, 1, 0]
+    one_hot: [0, 0, 1, 0]
+  right_up:
+    point: [5.367, 5.603, 6.687]    # [0, 0, 0, 1]
+    one_hot: [0, 0, 0, 1]
+
+
+
+train:
+  total_timesteps: 10000000
+  train_from_scratch: True
+  resume_checkpoint: ""  # set path to resume, or leave empty to start fresh
+  env:
+    visualize_detections: False
+    max_steps: 1600 # 2048 previously
+    control_mode: "policy"
+    mode: "train"
+    random_luminosity: True
+    set_luminosity: None
+    initial_confirmed_screws: None
+
+  ppo:
+    policy: "MultiInputPolicy"
+    n_steps: 2048
+    learning_rate: 0.0003
+    gamma: 0.99
+    batch_size: 64
+    target_kl: 0.1
+    clip_range: 0.2 # 0.1 to eixa
+    gae_lambda: 0.95
+    vf_coef: 0.5
+    ent_coef: 0.001
+    device: "cuda"
+
+eval:
+  env:
+    visualize_detections: True
+    max_steps: 20480
+    control_mode: "keyboard"
+    mode: "eval"
+    random_luminosity: False
+    set_luminosity: None
+    initial_confirmed_screws: [False, False, False, False]
+
+  
