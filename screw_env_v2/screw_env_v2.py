@@ -8,7 +8,7 @@ import cv2
 import json
 from abc import ABC
 from ultralytics import YOLO
-from test.utils import draw_boxes_on_image
+from utils.utils import draw_boxes_on_image
 from dataclasses import dataclass
 
 
