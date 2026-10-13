@@ -1,0 +1,52 @@
+workspace_path: "C:/Users/panosvrachnos/Documents/thesis_env"
+laptop_metadata_path: "controllers/laptop_database_finetune.json"
+experiment_name: "experiment_v3_multi_samples_YOLOv2_finetune"
+log_dir: "logs"
+
+yolo_model: "C:/Users/panosvrachnos/Documents/thesis_env/YOLO/yolo_v2/yolo_v2_weights/best.pt"
+
+train:
+  total_timesteps: 1499616
+  target_total_timesteps: 11500000
+  train_from_scratch: False
+  finetuning: true
+  resume_checkpoint: "logs/experiment_v3_multi_samples_YOLOv2_final/experiment_v3_multi_samples_YOLOv2_final_10000384_steps.zip" # set path to resume, or leave empty to start fresh
+  checkpoint_freq: 250000
+  env:
+    visualize_detections: False
+    max_steps: 1024 # 2048 previously
+    control_mode: "policy"
+    mode: "train"
+    random_luminosity: True
+    set_luminosity: None
+    initial_confirmed_screws: None
+
+  ppo:
+    policy: "MultiInputPolicy"
+    n_steps: 2032
+    learning_rate: 0.0001 # 0.0003
+    gamma: 0.99
+    batch_size: 64
+    target_kl: 0.1
+    clip_range: 0.2 # 0.1 to eixa
+    gae_lambda: 0.95
+    vf_coef: 0.5
+    ent_coef: 0.001
+    device: "cuda"
+
+eval:
+  env:
+    visualize_detections: True
+    max_steps: 18000 #1024
+    control_mode: "keyboard"
+    mode: "eval"
+    # Used by eval_v3.py when launching it with the IDE Play button.
+    # Set both to null to keep random laptop/version selection.
+    laptop_name: null
+    laptop_version_id: null  # Quote IDs when set, for example "0001".
+    scale: null
+    random_luminosity: False
+    set_luminosity: null
+    initial_confirmed_screws: [False, False, False, False]
+
+  

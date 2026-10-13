@@ -1,0 +1,48 @@
+workspace_path: C:/Users/panosvrachnos/Documents/thesis_env
+laptop_metadata_path: controllers/laptop_database_finetune.json
+experiment_name: experiment_v3_multi_samples_YOLOv2_finetune_resume
+log_dir: logs
+yolo_model: C:/Users/panosvrachnos/Documents/thesis_env/YOLO/yolo_v2/yolo_v2_weights/best.pt
+train:
+  total_timesteps: 249616
+  train_from_scratch: false
+  finetuning: true
+  resume_checkpoint: logs/experiment_v3_multi_samples_YOLOv2_finetune/experiment_v3_multi_samples_YOLOv2_finetune_11250384_steps.zip
+  checkpoint_freq: 250000
+  env:
+    visualize_detections: false
+    max_steps: 1024
+    control_mode: policy
+    mode: train
+    random_luminosity: true
+    set_luminosity: None
+    initial_confirmed_screws: None
+  ppo:
+    policy: MultiInputPolicy
+    n_steps: 2032
+    learning_rate: 0.0001
+    gamma: 0.99
+    batch_size: 64
+    target_kl: 0.1
+    clip_range: 0.2
+    gae_lambda: 0.95
+    vf_coef: 0.5
+    ent_coef: 0.001
+    device: cuda
+  resume_vecnormalize: logs/experiment_v3_multi_samples_YOLOv2_finetune/experiment_v3_multi_samples_YOLOv2_finetune_vecnormalize_11250384_steps.pkl
+eval:
+  env:
+    visualize_detections: true
+    max_steps: 1024
+    control_mode: keyboard
+    mode: eval
+    laptop_name: null
+    laptop_version_id: null
+    scale: null
+    random_luminosity: false
+    set_luminosity: null
+    initial_confirmed_screws:
+    - false
+    - false
+    - false
+    - false

@@ -1,0 +1,1020 @@
+{
+    "screws": {
+        "left_down": {
+            "one_hot": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        "left_up": {
+            "one_hot": [
+                0,
+                1,
+                0,
+                0
+            ]
+        },
+        "right_down": {
+            "one_hot": [
+                0,
+                0,
+                1,
+                0
+            ]
+        },
+        "right_up": {
+            "one_hot": [
+                0,
+                0,
+                0,
+                1
+            ]
+        }
+    },
+    "versions": {
+        "0000": {
+            "description": "no screws exist",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "noscrew",
+                "right_down": "noscrew",
+                "right_up": "noscrew"
+            }
+        },
+        "0001": {
+            "description": "right_up exists",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "noscrew",
+                "right_down": "noscrew",
+                "right_up": "screw"
+            }
+        },
+        "0010": {
+            "description": "right_down exists",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "noscrew",
+                "right_down": "screw",
+                "right_up": "noscrew"
+            }
+        },
+        "0011": {
+            "description": "right_down, right_up exist [ .| ]",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "noscrew",
+                "right_down": "screw",
+                "right_up": "screw"
+            }
+        },
+        "0100": {
+            "description": "left_up exists",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "screw",
+                "right_down": "noscrew",
+                "right_up": "noscrew"
+            }
+        },
+        "0101": {
+            "description": "left_up, right_up exist [ - ]",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "screw",
+                "right_down": "noscrew",
+                "right_up": "screw"
+            }
+        },
+        "0110": {
+            "description": "left_up, right_down exist [ \\ ]",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "screw",
+                "right_down": "screw",
+                "right_up": "noscrew"
+            }
+        },
+        "0111": {
+            "description": "left_down missing",
+            "classes": {
+                "left_down": "noscrew",
+                "left_up": "screw",
+                "right_down": "screw",
+                "right_up": "screw"
+            }
+        },
+        "1000": {
+            "description": "left_down exists",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "noscrew",
+                "right_down": "noscrew",
+                "right_up": "noscrew"
+            }
+        },
+        "1001": {
+            "description": "left_down, right_up exist [ / ]",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "noscrew",
+                "right_down": "noscrew",
+                "right_up": "screw"
+            }
+        },
+        "1010": {
+            "description": "left_down, right_down exist [ _ ]",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "noscrew",
+                "right_down": "screw",
+                "right_up": "noscrew"
+            }
+        },
+        "1011": {
+            "description": "left_up missing",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "noscrew",
+                "right_down": "screw",
+                "right_up": "screw"
+            }
+        },
+        "1100": {
+            "description": "left_down, left_up exist [ |. ]",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "screw",
+                "right_down": "noscrew",
+                "right_up": "noscrew"
+            }
+        },
+        "1101": {
+            "description": "right_down missing",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "screw",
+                "right_down": "noscrew",
+                "right_up": "screw"
+            }
+        },
+        "1110": {
+            "description": "right_up missing",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "screw",
+                "right_down": "screw",
+                "right_up": "noscrew"
+            }
+        },
+        "1111": {
+            "description": "all screws exist",
+            "classes": {
+                "left_down": "screw",
+                "left_up": "screw",
+                "right_down": "screw",
+                "right_up": "screw"
+            }
+        }
+    },
+    "laptops": {
+        "dell_laptop": {
+            "display_name": "Dell Laptop",
+            "mtl_file": "../protos/laptop_dell.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell_0000.obj",
+                "0001": "../protos/laptop_dell_0001.obj",
+                "0010": "../protos/laptop_dell_0010.obj",
+                "0011": "../protos/laptop_dell_0011.obj",
+                "0100": "../protos/laptop_dell_0100.obj",
+                "0101": "../protos/laptop_dell_0101.obj",
+                "0110": "../protos/laptop_dell_0110.obj",
+                "0111": "../protos/laptop_dell_0111.obj",
+                "1000": "../protos/laptop_dell_1000.obj",
+                "1001": "../protos/laptop_dell_1001.obj",
+                "1010": "../protos/laptop_dell_1010.obj",
+                "1011": "../protos/laptop_dell_1011.obj",
+                "1100": "../protos/laptop_dell_1100.obj",
+                "1101": "../protos/laptop_dell_1101.obj",
+                "1110": "../protos/laptop_dell_1110.obj",
+                "1111": "../protos/laptop_dell_1111.obj"
+            }
+        },
+        "dell_laptop2": {
+            "display_name": "Dell Laptop2",
+            "mtl_file": "../protos/laptop_dell2.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell2_0000.obj",
+                "0001": "../protos/laptop_dell2_0001.obj",
+                "0010": "../protos/laptop_dell2_0010.obj",
+                "0011": "../protos/laptop_dell2_0011.obj",
+                "0100": "../protos/laptop_dell2_0100.obj",
+                "0101": "../protos/laptop_dell2_0101.obj",
+                "0110": "../protos/laptop_dell2_0110.obj",
+                "0111": "../protos/laptop_dell2_0111.obj",
+                "1000": "../protos/laptop_dell2_1000.obj",
+                "1001": "../protos/laptop_dell2_1001.obj",
+                "1010": "../protos/laptop_dell2_1010.obj",
+                "1011": "../protos/laptop_dell2_1011.obj",
+                "1100": "../protos/laptop_dell2_1100.obj",
+                "1101": "../protos/laptop_dell2_1101.obj",
+                "1110": "../protos/laptop_dell2_1110.obj",
+                "1111": "../protos/laptop_dell2_1111.obj"
+            }
+        },
+        "dell_laptop3": {
+            "display_name": "Dell Laptop3",
+            "mtl_file": "../protos/laptop_dell3.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell3_0000.obj",
+                "0001": "../protos/laptop_dell3_0001.obj",
+                "0010": "../protos/laptop_dell3_0010.obj",
+                "0011": "../protos/laptop_dell3_0011.obj",
+                "0100": "../protos/laptop_dell3_0100.obj",
+                "0101": "../protos/laptop_dell3_0101.obj",
+                "0110": "../protos/laptop_dell3_0110.obj",
+                "0111": "../protos/laptop_dell3_0111.obj",
+                "1000": "../protos/laptop_dell3_1000.obj",
+                "1001": "../protos/laptop_dell3_1001.obj",
+                "1010": "../protos/laptop_dell3_1010.obj",
+                "1011": "../protos/laptop_dell3_1011.obj",
+                "1100": "../protos/laptop_dell3_1100.obj",
+                "1101": "../protos/laptop_dell3_1101.obj",
+                "1110": "../protos/laptop_dell3_1110.obj",
+                "1111": "../protos/laptop_dell3_1111.obj"
+            }
+        },
+        "dell_laptop4": {
+            "display_name": "Dell Laptop4",
+            "mtl_file": "../protos/laptop_dell4.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell4_0000.obj",
+                "0001": "../protos/laptop_dell4_0001.obj",
+                "0010": "../protos/laptop_dell4_0010.obj",
+                "0011": "../protos/laptop_dell4_0011.obj",
+                "0100": "../protos/laptop_dell4_0100.obj",
+                "0101": "../protos/laptop_dell4_0101.obj",
+                "0110": "../protos/laptop_dell4_0110.obj",
+                "0111": "../protos/laptop_dell4_0111.obj",
+                "1000": "../protos/laptop_dell4_1000.obj",
+                "1001": "../protos/laptop_dell4_1001.obj",
+                "1010": "../protos/laptop_dell4_1010.obj",
+                "1011": "../protos/laptop_dell4_1011.obj",
+                "1100": "../protos/laptop_dell4_1100.obj",
+                "1101": "../protos/laptop_dell4_1101.obj",
+                "1110": "../protos/laptop_dell4_1110.obj",
+                "1111": "../protos/laptop_dell4_1111.obj"
+            }
+        },
+        "dell_laptop5": {
+            "display_name": "Dell Laptop5",
+            "mtl_file": "../protos/laptop_dell5.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell5_0000.obj",
+                "0001": "../protos/laptop_dell5_0001.obj",
+                "0010": "../protos/laptop_dell5_0010.obj",
+                "0011": "../protos/laptop_dell5_0011.obj",
+                "0100": "../protos/laptop_dell5_0100.obj",
+                "0101": "../protos/laptop_dell5_0101.obj",
+                "0110": "../protos/laptop_dell5_0110.obj",
+                "0111": "../protos/laptop_dell5_0111.obj",
+                "1000": "../protos/laptop_dell5_1000.obj",
+                "1001": "../protos/laptop_dell5_1001.obj",
+                "1010": "../protos/laptop_dell5_1010.obj",
+                "1011": "../protos/laptop_dell5_1011.obj",
+                "1100": "../protos/laptop_dell5_1100.obj",
+                "1101": "../protos/laptop_dell5_1101.obj",
+                "1110": "../protos/laptop_dell5_1110.obj",
+                "1111": "../protos/laptop_dell5_1111.obj"
+            }
+        },
+        "dell_laptop6": {
+            "display_name": "Dell Laptop6",
+            "mtl_file": "../protos/laptop_dell6.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell6_0000.obj",
+                "0001": "../protos/laptop_dell6_0001.obj",
+                "0010": "../protos/laptop_dell6_0010.obj",
+                "0011": "../protos/laptop_dell6_0011.obj",
+                "0100": "../protos/laptop_dell6_0100.obj",
+                "0101": "../protos/laptop_dell6_0101.obj",
+                "0110": "../protos/laptop_dell6_0110.obj",
+                "0111": "../protos/laptop_dell6_0111.obj",
+                "1000": "../protos/laptop_dell6_1000.obj",
+                "1001": "../protos/laptop_dell6_1001.obj",
+                "1010": "../protos/laptop_dell6_1010.obj",
+                "1011": "../protos/laptop_dell6_1011.obj",
+                "1100": "../protos/laptop_dell6_1100.obj",
+                "1101": "../protos/laptop_dell6_1101.obj",
+                "1110": "../protos/laptop_dell6_1110.obj",
+                "1111": "../protos/laptop_dell6_1111.obj"
+            }
+        },
+        "dell_laptop7": {
+            "display_name": "Dell Laptop7",
+            "mtl_file": "../protos/laptop_dell7.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell7_0000.obj",
+                "0001": "../protos/laptop_dell7_0001.obj",
+                "0010": "../protos/laptop_dell7_0010.obj",
+                "0011": "../protos/laptop_dell7_0011.obj",
+                "0100": "../protos/laptop_dell7_0100.obj",
+                "0101": "../protos/laptop_dell7_0101.obj",
+                "0110": "../protos/laptop_dell7_0110.obj",
+                "0111": "../protos/laptop_dell7_0111.obj",
+                "1000": "../protos/laptop_dell7_1000.obj",
+                "1001": "../protos/laptop_dell7_1001.obj",
+                "1010": "../protos/laptop_dell7_1010.obj",
+                "1011": "../protos/laptop_dell7_1011.obj",
+                "1100": "../protos/laptop_dell7_1100.obj",
+                "1101": "../protos/laptop_dell7_1101.obj",
+                "1110": "../protos/laptop_dell7_1110.obj",
+                "1111": "../protos/laptop_dell7_1111.obj"
+            }
+        },
+        "dell_laptop8": {
+            "display_name": "Dell Laptop8",
+            "mtl_file": "../protos/laptop_dell8.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell8_0000.obj",
+                "0001": "../protos/laptop_dell8_0001.obj",
+                "0010": "../protos/laptop_dell8_0010.obj",
+                "0011": "../protos/laptop_dell8_0011.obj",
+                "0100": "../protos/laptop_dell8_0100.obj",
+                "0101": "../protos/laptop_dell8_0101.obj",
+                "0110": "../protos/laptop_dell8_0110.obj",
+                "0111": "../protos/laptop_dell8_0111.obj",
+                "1000": "../protos/laptop_dell8_1000.obj",
+                "1001": "../protos/laptop_dell8_1001.obj",
+                "1010": "../protos/laptop_dell8_1010.obj",
+                "1011": "../protos/laptop_dell8_1011.obj",
+                "1100": "../protos/laptop_dell8_1100.obj",
+                "1101": "../protos/laptop_dell8_1101.obj",
+                "1110": "../protos/laptop_dell8_1110.obj",
+                "1111": "../protos/laptop_dell8_1111.obj"
+            }
+        },
+        "dell_laptop9": {
+            "display_name": "Dell Laptop9",
+            "mtl_file": "../protos/laptop_dell9.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.708,
+                    5.132,
+                    6.687
+                ],
+                "left_up": [
+                    4.702,
+                    5.603,
+                    6.687
+                ],
+                "right_down": [
+                    5.36,
+                    5.132,
+                    6.687
+                ],
+                "right_up": [
+                    5.367,
+                    5.603,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/laptop_dell9_0000.obj",
+                "0001": "../protos/laptop_dell9_0001.obj",
+                "0010": "../protos/laptop_dell9_0010.obj",
+                "0011": "../protos/laptop_dell9_0011.obj",
+                "0100": "../protos/laptop_dell9_0100.obj",
+                "0101": "../protos/laptop_dell9_0101.obj",
+                "0110": "../protos/laptop_dell9_0110.obj",
+                "0111": "../protos/laptop_dell9_0111.obj",
+                "1000": "../protos/laptop_dell9_1000.obj",
+                "1001": "../protos/laptop_dell9_1001.obj",
+                "1010": "../protos/laptop_dell9_1010.obj",
+                "1011": "../protos/laptop_dell9_1011.obj",
+                "1100": "../protos/laptop_dell9_1100.obj",
+                "1101": "../protos/laptop_dell9_1101.obj",
+                "1110": "../protos/laptop_dell9_1110.obj",
+                "1111": "../protos/laptop_dell9_1111.obj"
+            }
+        },
+        "handmade_laptop2": {
+            "display_name": "Handmade Laptop2",
+            "mtl_file": "../protos/handmade_laptop2.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop2_0000.obj",
+                "0001": "../protos/handmade_laptop2_0001.obj",
+                "0010": "../protos/handmade_laptop2_0010.obj",
+                "0011": "../protos/handmade_laptop2_0011.obj",
+                "0100": "../protos/handmade_laptop2_0100.obj",
+                "0101": "../protos/handmade_laptop2_0101.obj",
+                "0110": "../protos/handmade_laptop2_0110.obj",
+                "0111": "../protos/handmade_laptop2_0111.obj",
+                "1000": "../protos/handmade_laptop2_1000.obj",
+                "1001": "../protos/handmade_laptop2_1001.obj",
+                "1010": "../protos/handmade_laptop2_1010.obj",
+                "1011": "../protos/handmade_laptop2_1011.obj",
+                "1100": "../protos/handmade_laptop2_1100.obj",
+                "1101": "../protos/handmade_laptop2_1101.obj",
+                "1110": "../protos/handmade_laptop2_1110.obj",
+                "1111": "../protos/handmade_laptop2_1111.obj"
+            }
+        },
+        "handmade_laptop3": {
+            "display_name": "Handmade Laptop3",
+            "mtl_file": "../protos/handmade_laptop3.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop3_0000.obj",
+                "0001": "../protos/handmade_laptop3_0001.obj",
+                "0010": "../protos/handmade_laptop3_0010.obj",
+                "0011": "../protos/handmade_laptop3_0011.obj",
+                "0100": "../protos/handmade_laptop3_0100.obj",
+                "0101": "../protos/handmade_laptop3_0101.obj",
+                "0110": "../protos/handmade_laptop3_0110.obj",
+                "0111": "../protos/handmade_laptop3_0111.obj",
+                "1000": "../protos/handmade_laptop3_1000.obj",
+                "1001": "../protos/handmade_laptop3_1001.obj",
+                "1010": "../protos/handmade_laptop3_1010.obj",
+                "1011": "../protos/handmade_laptop3_1011.obj",
+                "1100": "../protos/handmade_laptop3_1100.obj",
+                "1101": "../protos/handmade_laptop3_1101.obj",
+                "1110": "../protos/handmade_laptop3_1110.obj",
+                "1111": "../protos/handmade_laptop3_1111.obj"
+            }
+        },
+        "handmade_laptop4": {
+            "display_name": "Handmade Laptop4",
+            "mtl_file": "../protos/handmade_laptop4.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop4_0000.obj",
+                "0001": "../protos/handmade_laptop4_0001.obj",
+                "0010": "../protos/handmade_laptop4_0010.obj",
+                "0011": "../protos/handmade_laptop4_0011.obj",
+                "0100": "../protos/handmade_laptop4_0100.obj",
+                "0101": "../protos/handmade_laptop4_0101.obj",
+                "0110": "../protos/handmade_laptop4_0110.obj",
+                "0111": "../protos/handmade_laptop4_0111.obj",
+                "1000": "../protos/handmade_laptop4_1000.obj",
+                "1001": "../protos/handmade_laptop4_1001.obj",
+                "1010": "../protos/handmade_laptop4_1010.obj",
+                "1011": "../protos/handmade_laptop4_1011.obj",
+                "1100": "../protos/handmade_laptop4_1100.obj",
+                "1101": "../protos/handmade_laptop4_1101.obj",
+                "1110": "../protos/handmade_laptop4_1110.obj",
+                "1111": "../protos/handmade_laptop4_1111.obj"
+            }
+        },
+        "handmade_laptop5": {
+            "display_name": "Handmade Laptop5",
+            "mtl_file": "../protos/handmade_laptop5.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop5_0000.obj",
+                "0001": "../protos/handmade_laptop5_0001.obj",
+                "0010": "../protos/handmade_laptop5_0010.obj",
+                "0011": "../protos/handmade_laptop5_0011.obj",
+                "0100": "../protos/handmade_laptop5_0100.obj",
+                "0101": "../protos/handmade_laptop5_0101.obj",
+                "0110": "../protos/handmade_laptop5_0110.obj",
+                "0111": "../protos/handmade_laptop5_0111.obj",
+                "1000": "../protos/handmade_laptop5_1000.obj",
+                "1001": "../protos/handmade_laptop5_1001.obj",
+                "1010": "../protos/handmade_laptop5_1010.obj",
+                "1011": "../protos/handmade_laptop5_1011.obj",
+                "1100": "../protos/handmade_laptop5_1100.obj",
+                "1101": "../protos/handmade_laptop5_1101.obj",
+                "1110": "../protos/handmade_laptop5_1110.obj",
+                "1111": "../protos/handmade_laptop5_1111.obj"
+            }
+        },
+        "handmade_laptop6": {
+            "display_name": "Handmade Laptop6",
+            "mtl_file": "../protos/handmade_laptop6.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop6_0000.obj",
+                "0001": "../protos/handmade_laptop6_0001.obj",
+                "0010": "../protos/handmade_laptop6_0010.obj",
+                "0011": "../protos/handmade_laptop6_0011.obj",
+                "0100": "../protos/handmade_laptop6_0100.obj",
+                "0101": "../protos/handmade_laptop6_0101.obj",
+                "0110": "../protos/handmade_laptop6_0110.obj",
+                "0111": "../protos/handmade_laptop6_0111.obj",
+                "1000": "../protos/handmade_laptop6_1000.obj",
+                "1001": "../protos/handmade_laptop6_1001.obj",
+                "1010": "../protos/handmade_laptop6_1010.obj",
+                "1011": "../protos/handmade_laptop6_1011.obj",
+                "1100": "../protos/handmade_laptop6_1100.obj",
+                "1101": "../protos/handmade_laptop6_1101.obj",
+                "1110": "../protos/handmade_laptop6_1110.obj",
+                "1111": "../protos/handmade_laptop6_1111.obj"
+            }
+        },
+        "handmade_laptop7": {
+            "display_name": "Handmade Laptop7",
+            "mtl_file": "../protos/handmade_laptop7.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop7_0000.obj",
+                "0001": "../protos/handmade_laptop7_0001.obj",
+                "0010": "../protos/handmade_laptop7_0010.obj",
+                "0011": "../protos/handmade_laptop7_0011.obj",
+                "0100": "../protos/handmade_laptop7_0100.obj",
+                "0101": "../protos/handmade_laptop7_0101.obj",
+                "0110": "../protos/handmade_laptop7_0110.obj",
+                "0111": "../protos/handmade_laptop7_0111.obj",
+                "1000": "../protos/handmade_laptop7_1000.obj",
+                "1001": "../protos/handmade_laptop7_1001.obj",
+                "1010": "../protos/handmade_laptop7_1010.obj",
+                "1011": "../protos/handmade_laptop7_1011.obj",
+                "1100": "../protos/handmade_laptop7_1100.obj",
+                "1101": "../protos/handmade_laptop7_1101.obj",
+                "1110": "../protos/handmade_laptop7_1110.obj",
+                "1111": "../protos/handmade_laptop7_1111.obj"
+            }
+        },
+        "handmade_laptop8": {
+            "display_name": "Handmade Laptop8",
+            "mtl_file": "../protos/handmade_laptop8.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop8_0000.obj",
+                "0001": "../protos/handmade_laptop8_0001.obj",
+                "0010": "../protos/handmade_laptop8_0010.obj",
+                "0011": "../protos/handmade_laptop8_0011.obj",
+                "0100": "../protos/handmade_laptop8_0100.obj",
+                "0101": "../protos/handmade_laptop8_0101.obj",
+                "0110": "../protos/handmade_laptop8_0110.obj",
+                "0111": "../protos/handmade_laptop8_0111.obj",
+                "1000": "../protos/handmade_laptop8_1000.obj",
+                "1001": "../protos/handmade_laptop8_1001.obj",
+                "1010": "../protos/handmade_laptop8_1010.obj",
+                "1011": "../protos/handmade_laptop8_1011.obj",
+                "1100": "../protos/handmade_laptop8_1100.obj",
+                "1101": "../protos/handmade_laptop8_1101.obj",
+                "1110": "../protos/handmade_laptop8_1110.obj",
+                "1111": "../protos/handmade_laptop8_1111.obj"
+            }
+        },
+        "handmade_laptop9": {
+            "display_name": "Handmade Laptop9",
+            "mtl_file": "../protos/handmade_laptop9.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop9_0000.obj",
+                "0001": "../protos/handmade_laptop9_0001.obj",
+                "0010": "../protos/handmade_laptop9_0010.obj",
+                "0011": "../protos/handmade_laptop9_0011.obj",
+                "0100": "../protos/handmade_laptop9_0100.obj",
+                "0101": "../protos/handmade_laptop9_0101.obj",
+                "0110": "../protos/handmade_laptop9_0110.obj",
+                "0111": "../protos/handmade_laptop9_0111.obj",
+                "1000": "../protos/handmade_laptop9_1000.obj",
+                "1001": "../protos/handmade_laptop9_1001.obj",
+                "1010": "../protos/handmade_laptop9_1010.obj",
+                "1011": "../protos/handmade_laptop9_1011.obj",
+                "1100": "../protos/handmade_laptop9_1100.obj",
+                "1101": "../protos/handmade_laptop9_1101.obj",
+                "1110": "../protos/handmade_laptop9_1110.obj",
+                "1111": "../protos/handmade_laptop9_1111.obj"
+            }
+        },
+        "handmade_laptop10": {
+            "display_name": "Handmade Laptop10",
+            "mtl_file": "../protos/handmade_laptop10.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.701,
+                    5.06,
+                    6.687
+                ],
+                "left_up": [
+                    4.696,
+                    5.54,
+                    6.687
+                ],
+                "right_down": [
+                    5.398,
+                    5.06,
+                    6.687
+                ],
+                "right_up": [
+                    5.402,
+                    5.54,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "0000": "../protos/handmade_laptop10_0000.obj",
+                "0001": "../protos/handmade_laptop10_0001.obj",
+                "0010": "../protos/handmade_laptop10_0010.obj",
+                "0011": "../protos/handmade_laptop10_0011.obj",
+                "0100": "../protos/handmade_laptop10_0100.obj",
+                "0101": "../protos/handmade_laptop10_0101.obj",
+                "0110": "../protos/handmade_laptop10_0110.obj",
+                "0111": "../protos/handmade_laptop10_0111.obj",
+                "1000": "../protos/handmade_laptop10_1000.obj",
+                "1001": "../protos/handmade_laptop10_1001.obj",
+                "1010": "../protos/handmade_laptop10_1010.obj",
+                "1011": "../protos/handmade_laptop10_1011.obj",
+                "1100": "../protos/handmade_laptop10_1100.obj",
+                "1101": "../protos/handmade_laptop10_1101.obj",
+                "1110": "../protos/handmade_laptop10_1110.obj",
+                "1111": "../protos/handmade_laptop10_1111.obj"
+            }
+        },
+        "test_laptop": {
+            "display_name": "Test Laptop",
+            "mtl_file": "../protos/test_laptop.mtl",
+            "screw_points": {
+                "left_down": [
+                    4.719,
+                    5.146,
+                    6.687
+                ],
+                "left_up": [
+                    4.742,
+                    5.6,
+                    6.687
+                ],
+                "right_down": [
+                    5.34,
+                    5.147,
+                    6.687
+                ],
+                "right_up": [
+                    5.324,
+                    5.6,
+                    6.687
+                ]
+            },
+            "version_objs": {
+                "1111": "../protos/test_laptop_1111.obj",
+                "0000": "../protos/test_laptop_0000.obj",
+                "0001": "../protos/test_laptop_0001.obj",
+                "0010": "../protos/test_laptop_0010.obj",
+                "0011": "../protos/test_laptop_0011.obj",
+                "0100": "../protos/test_laptop_0100.obj",
+                "0101": "../protos/test_laptop_0101.obj",
+                "0110": "../protos/test_laptop_0110.obj",
+                "0111": "../protos/test_laptop_0111.obj",
+                "1000": "../protos/test_laptop_1000.obj",
+                "1001": "../protos/test_laptop_1001.obj",
+                "1010": "../protos/test_laptop_1010.obj",
+                "1011": "../protos/test_laptop_1011.obj",
+                "1100": "../protos/test_laptop_1100.obj",
+                "1101": "../protos/test_laptop_1101.obj",
+                "1110": "../protos/test_laptop_1110.obj"
+            }
+        }
+    }
+}

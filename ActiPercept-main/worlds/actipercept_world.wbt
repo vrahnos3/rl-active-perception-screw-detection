@@ -1,0 +1,167 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+  info [
+    "This example shows an integration of OpenAI Gym with Webots."
+  ]
+  title "OpenAI Gym Environment"
+  basicTimeStep 64
+}
+Viewpoint {
+  orientation -0.41800384808695423 0.4264497629427624 0.8021305272027491 1.7699534733310045
+  position 4.898532803130892 -0.8434539229514941 14.66087258020124
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  translation 5 5 5
+  appearance Parquetry {
+    type "light strip"
+  }
+}
+Solid {
+  translation 5 5 5
+  rotation 1 0 0 1.5708
+  children [
+    CadShape {
+      url [
+        "../protos/desk.obj"
+        ""
+        ""
+        ""
+      ]
+    }
+  ]
+  name "desk"
+}
+Solid {
+  translation 5 5 5.62
+  rotation 1 0 0 1.5708
+  children [
+    CadShape {
+      url [
+        "../protos/laptop_dell_latitude_5400_3-Test.obj"
+      ]
+    }
+  ]
+  name "laptop"
+}
+Robot {
+  translation 5 5.37 8
+  children [
+    DEF camera Camera {
+      rotation 0.5773489358556708 -0.5773509358554485 -0.5773509358554485 -2.094395307179586
+      children [
+        Solid {
+          translation 0.11 0 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.21 0.001 0.001
+              }
+              castShadows FALSE
+            }
+          ]
+          name "camera_direction"
+        }
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.02 0.1 0.1
+              }
+            }
+          ]
+          name "camera_shape"
+        }
+      ]
+      width 480
+      height 270
+    }
+  ]
+  controller "<extern>"
+  supervisor TRUE
+}
+DEF left_down_screw Solid {
+  translation 4.708 5.132 6.687
+  rotation 1 0 0 3.14159
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Cone {
+        bottomRadius 0.002
+        height 0.001
+      }
+    }
+  ]
+  name "screw_left_down"
+}
+DEF right_down_screw Solid {
+  translation 5.36 5.132 6.687
+  rotation 1 0 0 3.14159
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Cone {
+        bottomRadius 0.002
+        height 0.001
+      }
+    }
+  ]
+  name "screw_right_down"
+}
+DEF left_up_screw Solid {
+  translation 4.702 5.603 6.687
+  rotation 1 0 0 3.14159
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Cone {
+        bottomRadius 0.002
+        height 0.001
+      }
+    }
+  ]
+  name "screw_left_up"
+}
+DEF right_up_screw Solid {
+  translation 5.367 5.603 6.687
+  rotation 1 0 0 3.14159
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Cone {
+        bottomRadius 0.002
+        height 0.001
+      }
+    }
+  ]
+  name "screw_right_up"
+}
